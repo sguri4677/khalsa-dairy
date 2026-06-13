@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalsa Dairy Farm</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f5f0;
+color:#333;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#1b4332;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.hero p{
+margin-top:15px;
+font-size:1.2rem;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+background:#d4a373;
+color:white;
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+color:#1b4332;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.stats{
+background:#1b4332;
+color:white;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.counter{
+font-size:2rem;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.contact{
+max-width:700px;
+margin:auto;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.contact button{
+margin-top:15px;
+padding:12px 25px;
+background:#1b4332;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#081c15;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+
+nav ul{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Khalsa Dairy Farm</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Khalsa Dairy Farm</h1>
+<p>Pure Freshness, Straight From Our Farm</p>
+<a href="#products" class="btn">Explore Products</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<p style="text-align:center;max-width:800px;margin:auto;">
+Khalsa Dairy Farm is dedicated to producing fresh, nutritious and hygienic dairy products in Jammu. We believe in quality, animal welfare and customer satisfaction.
+</p>
+</section>
+
+<section id="products">
+<h2 class="section-title">Our Products</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Fresh Milk</h3>
+<p>Farm fresh milk delivered daily.</p>
+</div>
+
+<div class="card">
+<h3>Desi Ghee</h3>
+<p>Traditional rich and pure ghee.</p>
+</div>
+
+<div class="card">
+<h3>Paneer</h3>
+<p>Soft and fresh paneer.</p>
+</div>
+
+<div class="card">
+<h3>Curd</h3>
+<p>Healthy and creamy curd.</p>
+</div>
+
+<div class="card">
+<h3>Butter</h3>
+<p>Fresh homemade butter.</p>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<h2 class="section-title" style="color:white;">Farm Statistics</h2>
+
+<div class="stats-grid">
+<div>
+<div class="counter" data-target="50">0</div>
+<p>Cattle</p>
+</div>
+
+<div>
+<div class="counter" data-target="500">0</div>
+<p>Happy Customers</p>
+</div>
+
+<div>
+<div class="counter" data-target="1000">0</div>
+<p>Litres Weekly</p>
+</div>
+
+<div>
+<div class="counter" data-target="5">0</div>
+<p>Years Experience</p>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Testimonials</h2>
+
+<div class="cards">
+<div class="card">
+"Excellent quality milk and service."
+</div>
+
+<div class="card">
+"Best ghee in the area."
+</div>
+
+<div class="card">
+"Fresh products every day."
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+<p><strong>Location:</strong> Jammu, Jammu & Kashmir</p>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+</div>
+</section>
+
+<footer>
+© 2026 Khalsa Dairy Farm. All Rights Reserved.
+</footer>
+
+<script>
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+let target=+counter.dataset.target;
+let count=0;
+
+let update=()=>{
+count+=Math.ceil(target/50);
+
+if(count>=target){
+counter.innerText=target+"+";
+}
+else{
+counter.innerText=count;
+requestAnimationFrame(update);
+}
+};
+
+update();
+});
+</script>
+
+</body>
+</html>
